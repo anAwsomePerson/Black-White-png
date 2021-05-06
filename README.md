@@ -19,7 +19,7 @@ Put a .png file and a copy of black-white-png.py in the same folder.
 
 Open your command line app and use the "cd" command so that folder becomes your working directory.
 
-Enter "python3 black-white-png.py <brightness> <in file name> <out file name>".
+Enter "python3 black-white-png.py \<brightness\> \<in file name\> \<out file name\>".
 
 Brightness can be any integer between 0 and 256 (exclusive)\*. Every pixel becomes black if its brightness is less than the brightness you entered.
 
