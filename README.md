@@ -19,10 +19,12 @@ Put a .png file and a copy of black-white-png.py in the same folder.
 
 Open your command line app and use the "cd" command so that folder becomes your working directory.
 
-Enter "python3 black-white-png.py \<brightness\> \<in file name\> \<out file name\>".
+Enter "python3 black-white-png.py \<brightness\> \<in file name\> \<out file name\> [swap]".
 
 Brightness can be any integer between 0 and 256 (exclusive)\*. Every pixel becomes black if its brightness is less than the brightness you entered.
 
 Example: The command "python3 black-white-png.py 128 gate.png gate128.png" creates a file named gate128.png. In that file, every pixel is black if its brightness was less than 128 in gate.png.
+
+You can choose to put something after the out file name (such as "python3 black-white-png.py 128 gate.png gate128s.png swap"). This swaps the black and white pixels.
 
 \*Technically it will work with any integer, but integers 0 or less will simply result in a white rectangle, and integers 256 or greater will simply result in a black rectangle.

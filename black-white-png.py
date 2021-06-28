@@ -7,8 +7,13 @@ def convertRow(pixelSize, colorSize, inRow):
     brightness = 0
 
     for b in range(0, len(inRow)):
+        color = float(inRow[b])
+
+        if(len(sys.argv) > 4):
+            color = 255 - float(inRow[b])
+
         if(b % pixelSize == colorSize - 1):
-            brightness += float(inRow[b])
+            brightness += color
 
             if(int(brightness) < int(sys.argv[1]) * colorSize):
                 outRow = outRow + [0]
@@ -17,7 +22,7 @@ def convertRow(pixelSize, colorSize, inRow):
             
             brightness = 0
         elif(b % pixelSize < colorSize - 1):
-            brightness += float(inRow[b])
+            brightness += color
     
     return([outRow])
 
